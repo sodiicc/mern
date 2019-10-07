@@ -1,9 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## START
+<h2>START<h2> <br>
 
-Inside progect: npm run start. <br>
-cd backend <br>
-npm run start <br>
-insert http://localhost:3000 in your browser <br>
-or open on https://mern-taskss.herokuapp.com/ used the same database
+Inside progect: 
+```
+$ npm run start
+```
+```
+$ cd backend<br>
+```
+```
+$ npm run start
+```
+
+insert http://localhost:3000 in your browser

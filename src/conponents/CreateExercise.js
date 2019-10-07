@@ -12,6 +12,7 @@ export const CreateExercise = () => {
   });
   const [users, setUsers] = useState([]);
   
+  
   useEffect(() => {
     axios.get("/users").then(res => {
       if (res.data.length > 0) {
