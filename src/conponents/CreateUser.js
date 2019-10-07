@@ -11,7 +11,7 @@ export const CreateUser = () => {
   const onSubmit = e => {
     e.preventDefault();
     
-    axios.post('http://localhost:9000/users/add', {username})
+    axios.post('/users/add', {username})
     .then(res => console.log(res.data))
 
     setUsername('')

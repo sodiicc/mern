@@ -13,7 +13,7 @@ export const CreateExercise = () => {
   const [users, setUsers] = useState([]);
   
   useEffect(() => {
-    axios.get("http://localhost:9000/users").then(res => {
+    axios.get("/users").then(res => {
       if (res.data.length > 0) {
         setUsers(
           res.data.map(user => {
@@ -62,7 +62,7 @@ export const CreateExercise = () => {
     console.log("exercise", exercise);
 
     axios
-      .post("http://localhost:9000/exercises/add", exercise)
+      .post("/exercises/add", exercise)
       .then(res => console.log(res.data));
 
     window.location = "/";

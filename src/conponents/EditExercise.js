@@ -14,7 +14,7 @@ export const EditExercise = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:9000/exercises/" + props.match.params.id)
+      .get("/exercises/" + props.match.params.id)
       .then(res => {
         const data = res.data
         setExercise({
@@ -26,7 +26,7 @@ export const EditExercise = (props) => {
       })
       .catch(err => console.log(err))
 
-      axios.get("http://localhost:9000/users").then(res => {
+      axios.get("/users").then(res => {
       if (res.data.length > 0) {
         setUsers(
           res.data.map(user => {
@@ -75,7 +75,7 @@ export const EditExercise = (props) => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:9000/exercises/update/"+ props.match.params.id, exercise)
+      .post("/exercises/update/"+ props.match.params.id, exercise)
       .then(res => console.log(res.data));
 
     window.location = "/";
