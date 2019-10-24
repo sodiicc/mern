@@ -12,10 +12,6 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 app.use(cors());
 app.use(express.json());
 
-// if(process.env.NODE_ENV ==='production'){
-//   app.use(express.static("backend/build"))
-// }
-
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true});
 const connection = mongoose.connection;
